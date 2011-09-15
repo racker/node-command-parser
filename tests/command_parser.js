@@ -209,7 +209,7 @@ exports['test_exception_is_thrown_on_too_many_arguments'] = function(test, asser
 
   assert.equal(1, n, 'Exceptions thrown');
   test.finish();
-}
+};
 
 exports['test_exception_is_thrown_on_missing_required_argument'] = function(test, assert) {
   var stdoutData = [];
@@ -342,18 +342,13 @@ exports['test_command_services_list'] = function(test, assert) {
   test.finish();
 };
 
-exports['_test_default_command_result_handler'] = function(test, assert) {
+exports['test_default_command_result_handler'] = function(test, assert) {
   // Mock terminal.puts and clientUtils.printErrorAndExit
   var terminalPutsBuffer = '';
   var printErrorAndExitCalled = false;
 
   terminal.puts = function(data) {
     terminalPutsBuffer += data;
-  };
-
-  clientUtils.printErrorAndExit = function(err) {
-    terminalPutsBuffer += err.message;
-    printErrorAndExitCalled = true;
   };
 
   var parser = new CommandParser(COMMANDS_PATH);
@@ -365,7 +360,6 @@ exports['_test_default_command_result_handler'] = function(test, assert) {
   terminalPutsBuffer = '';
 
   parser.parse(['bin', 'file', 'error']);
-  assert.ok(printErrorAndExitCalled);
   assert.match(terminalPutsBuffer, /command failed/i);
 
   test.finish();

@@ -8,10 +8,10 @@
   "description": "The best command parser.",
   "keywords": ["opts", "parseopt", "opt", "args", "console", "argsparse", "optparse", "autocomplete", "command", "autocompletion"],
   "version": "0.1.0",
-  "homepage": "https://github.com/racker/command-parser",
+  "homepage": "https://github.com/racker/node-command-parser",
   "repository": {
     "type": "git",
-    "url": "git://github.com/racker/command-parser.git"
+    "url": "git://github.com/racker/node-command-parser.git"
   },
   "main": "lib/command_parser.js",
   "directories": {
