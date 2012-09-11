@@ -21,7 +21,7 @@
     "test": "make test"
   },
   "engines": {
-    "node": ">= 0.4.0"
+    "node": ">= 0.4.0 && < 0.9.0"
   },
   "dependencies" : {
     "terminal": "0.1.1",
@@ -30,7 +30,7 @@
     "sprintf": "0.1.1"
   },
   "devDependencies": {
-    "whiskey": "0.4.1"
+    "whiskey": "0.6.10"
   },
   "licenses": [
     {
